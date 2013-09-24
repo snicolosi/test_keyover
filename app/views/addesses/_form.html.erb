@@ -1,0 +1,45 @@
+<%= form_for(@addess) do |f| %>
+  <% if @addess.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@addess.errors.count, "error") %> prohibited this addess from being saved:</h2>
+
+      <ul>
+      <% @addess.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :street_type %><br />
+    <%= f.number_field :street_type %>
+  </div>
+  <div class="field">
+    <%= f.label :street %><br />
+    <%= f.text_field :street %>
+  </div>
+  <div class="field">
+    <%= f.label :number %><br />
+    <%= f.text_field :number %>
+  </div>
+  <div class="field">
+    <%= f.label :city %><br />
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :zip %><br />
+    <%= f.text_field :zip %>
+  </div>
+  <div class="field">
+    <%= f.label :country %><br />
+    <%= f.text_field :country %>
+  </div>
+  <div class="field">
+    <%= f.label :person %><br />
+    <%= f.text_field :person %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
