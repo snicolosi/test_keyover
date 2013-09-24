@@ -1,5 +1,5 @@
 TestKeyover::Application.routes.draw do
-  resources :addesses
+  resources :addresses
 
 
   resources :people

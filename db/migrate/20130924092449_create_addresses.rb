@@ -1,6 +1,6 @@
-class CreateAddesses < ActiveRecord::Migration
+class CreateAddresses < ActiveRecord::Migration
   def change
-    create_table :addesses do |t|
+    create_table :addresses do |t|
       t.integer :street_type
       t.string :street
       t.string :number
@@ -11,6 +11,6 @@ class CreateAddesses < ActiveRecord::Migration
 
       t.timestamps
     end
-    add_index :addesses, :person_id
+    add_index :addresses, :person_id
   end
 end

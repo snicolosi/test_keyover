@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(:version => 20130924092449) do
 
-  create_table "addesses", :force => true do |t|
+  create_table "addresses", :force => true do |t|
     t.integer  "street_type"
     t.string   "street"
     t.string   "number"
@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(:version => 20130924092449) do
     t.datetime "updated_at",  :null => false
   end
 
-  add_index "addesses", ["person_id"], :name => "index_addesses_on_person_id"
+  add_index "addresses", ["person_id"], :name => "index_addresses_on_person_id"
 
   create_table "people", :force => true do |t|
     t.string   "name"
